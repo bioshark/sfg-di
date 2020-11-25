@@ -2,9 +2,7 @@ package roly.springframework.sfgdi.controllers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import roly.springframework.sfgdi.services.GreetingServiceImplementation;
-
-import static org.junit.jupiter.api.Assertions.*;
+import roly.springframework.sfgdi.services.ConstructorGreetingService;
 
 class SetterInjectedControllerTest {
 
@@ -13,7 +11,7 @@ class SetterInjectedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new SetterInjectedController();
-        controller.setGreetingService(new GreetingServiceImplementation());
+        controller.setGreetingService(new ConstructorGreetingService());
     }
 
     @Test
