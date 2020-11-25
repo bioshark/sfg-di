@@ -19,6 +19,6 @@ class ConstructorInjectedControllerTest {
     void testContructorInjectedController() {
         System.out.println(controller.getGreeting());
 
-        assertThat(controller.getGreeting()).isEqualTo("Hello World English!");
+        assertThat(controller.getGreeting()).isEqualTo("Hello World - Constructor!");
     }
 }

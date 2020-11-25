@@ -37,9 +37,10 @@ public class SfgDiApplication {
 
         System.out.println(constructorInjectedController.getGreeting());
 
-        System.out.println("------------AVAILABLE BEANS ------------");
-        Arrays.stream(ctx.getBeanDefinitionNames())
-                .forEach(System.out::println);
+//        System.out.println("------------AVAILABLE BEANS ------------");
+//        Arrays.stream(ctx.getBeanDefinitionNames())
+//                .forEach(System.out::println);
+
 
 
 
