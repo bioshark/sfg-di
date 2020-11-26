@@ -54,4 +54,12 @@ public class LifeCycleDemoBean implements InitializingBean, DisposableBean, Bean
         System.out.println("LifeCycleDemoBean - Pre Destroy annotation!");
     }
 
+    public void beforeInit() {
+        System.out.println(" - LifeCycleDemoBean - Before Init");
+    }
+
+    public void afterInit() {
+        System.out.println(" - LifeCycleDemoBean - After Init");
+    }
+
 }
