@@ -1,12 +1,11 @@
 package roly.springframework.sfgdi.controllers;
 
-import org.springframework.stereotype.Controller;
 import roly.springframework.sfgdi.services.PetService;
 
 /**
  * Created by jt on 12/28/19.
  */
-@Controller
+//@Controller
 public class PetController {
 
     private final PetService petService;

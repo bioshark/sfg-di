@@ -6,13 +6,15 @@ import roly.springframework.sfgdi.services.GreetingService;
 @Controller
 public class MyController {
 
-    private final GreetingService greetingService;
+    private GreetingService greetingService;
 
     public MyController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
-    public String sayHello() {
+    public String hello(){
+        System.out.println("Hello!!! ");
+
         return greetingService.sayGreeting();
     }
 }

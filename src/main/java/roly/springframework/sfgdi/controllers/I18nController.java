@@ -1,10 +1,9 @@
 package roly.springframework.sfgdi.controllers;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Controller;
 import roly.springframework.sfgdi.services.GreetingService;
 
-@Controller
+//@Controller
 public class I18nController {
 
     private final GreetingService greetingService;
