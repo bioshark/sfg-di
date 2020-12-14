@@ -1,0 +1,24 @@
+name: Roly
+names:
+  - John
+  - Robert
+  - Ringo
+book:
+  author: Knuth
+  publisher: Addison, W.
+
+truth: yes
+another_true: true
+more_true: true
+
+false: no
+string_val: "escaped quote it's "
+string_escape: "escape :"
+new_line: |
+  text
+  with
+  new
+  line
+
+ignore: >
+  ignored new lines

@@ -1,0 +1,5 @@
+roly:
+  jms:
+    username: JMS Roly
+    password: lalaal JMS
+    dburl: url for JMS
