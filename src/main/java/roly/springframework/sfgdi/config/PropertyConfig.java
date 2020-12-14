@@ -1,25 +1,13 @@
 package roly.springframework.sfgdi.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
-import org.springframework.core.env.Environment;
 import roly.springframework.sfgdi.examplebeans.FakeDataSource;
 import roly.springframework.sfgdi.examplebeans.FakeJmsBroker;
 
 @Configuration
-//@PropertySource({"classpath:datasource.properties", "classpath:jms.properties"})
-@PropertySources({
-        @PropertySource("classpath:datasource.properties"),
-        @PropertySource("classpath:jms.properties"),
-})
 public class PropertyConfig {
-
-    @Autowired
-    private Environment env;
 
     @Value("${roly.username}")
     String user;
@@ -37,8 +25,7 @@ public class PropertyConfig {
     @Bean
     public FakeDataSource fakeDataSource() {
         FakeDataSource fakeDataSource = new FakeDataSource();
-//        fakeDataSource.setUser(user);
-        fakeDataSource.setUser(env.getProperty("USERNAME"));
+        fakeDataSource.setUser(user);
         fakeDataSource.setPassword(password);
         fakeDataSource.setUrl(url);
         return fakeDataSource;
@@ -52,5 +39,4 @@ public class PropertyConfig {
         fakeJmsBroker.setUrl(jmsUrl);
         return fakeJmsBroker;
     }
-
 }
