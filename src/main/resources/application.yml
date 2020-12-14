@@ -3,3 +3,12 @@ roly:
     username: JMS Roly
     password: lalaal JMS
     dburl: url for JMS
+
+---
+spring:
+  config:
+    activate:
+      on-profile: es
+roly:
+  jms:
+    username: JMS Roly ESPANIOL
